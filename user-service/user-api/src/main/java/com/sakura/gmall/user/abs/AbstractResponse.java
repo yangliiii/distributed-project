@@ -8,14 +8,14 @@ import java.io.Serializable;
 public abstract class AbstractResponse implements Serializable {
     private static final long serialVersionUID = -416062285931365951L;
 
-    private int code;
+    private String code;
     private Object message;
 
-    public int getCode() {
+    public String getCode() {
         return code;
     }
 
-    public void setCode(int code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
