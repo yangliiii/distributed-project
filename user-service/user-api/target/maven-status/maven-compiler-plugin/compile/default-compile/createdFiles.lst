@@ -1,0 +1,4 @@
+com\sakura\gmall\user\dto\UserLoginRequest.class
+com\sakura\gmall\user\IUserCoreService.class
+com\sakura\gmall\user\abs\AbstractResponse.class
+com\sakura\gmall\user\dto\UserLoginResponse.class
