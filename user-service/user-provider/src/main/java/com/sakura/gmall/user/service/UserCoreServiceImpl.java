@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 /**
  * Created by lies on 2018/8/3.
  */
-@Service
+@Service("userCoreService")
 public class UserCoreServiceImpl implements IUserCoreService {
 
     Logger LOG = LoggerFactory.getLogger(this.getClass());
