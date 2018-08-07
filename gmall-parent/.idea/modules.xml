@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/gmall-dubbo/gmall-dubbo.iml" filepath="$PROJECT_DIR$/gmall-dubbo/gmall-dubbo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-parent.iml" filepath="$PROJECT_DIR$/gmall-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-web/gmall-web.iml" filepath="$PROJECT_DIR$/gmall-web/gmall-web.iml" />
+    </modules>
+  </component>
+</project>

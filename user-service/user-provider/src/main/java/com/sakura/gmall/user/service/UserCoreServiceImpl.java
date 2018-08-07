@@ -34,8 +34,8 @@ public class UserCoreServiceImpl implements IUserCoreService {
 
         try {
             beforeValidate(request);
-            User user = userMapper.getByUserName(request.getUserName());
-            if (user == null || !user.getUsername().equals(request.getUserName())) {
+            User user = userMapper.getByUserName(request.getUsername());
+            if (user == null || !user.getUsername().equals(request.getUsername())) {
                 response.setCode(ResponseCodeEnum.USERORPASSWORD_ERRROR.getCode());
                 response.setMessage(ResponseCodeEnum.USERORPASSWORD_ERRROR.getMsg());
                 return response;
@@ -47,7 +47,7 @@ public class UserCoreServiceImpl implements IUserCoreService {
             response.setMessage(ResponseCodeEnum.SUCCESS.getMsg());
 
 
-        } catch (Exception e){
+        } catch (Exception e) {
             LOG.info("login occur exception" + e);
             ServiceException serviceException = (ServiceException) ExceptionUtil.handlerException4biz(e);
             response.setCode(serviceException.getErrorCode());
@@ -59,14 +59,14 @@ public class UserCoreServiceImpl implements IUserCoreService {
         return response;
     }
 
-    private void beforeValidate(UserLoginRequest request){
+    private void beforeValidate(UserLoginRequest request) {
         if (request == null) {
             throw new ValidateException("请求对象为空！");
         }
-        if (StringUtils.isEmpty(request.getUserName())) {
+        if (StringUtils.isEmpty(request.getUsername())) {
             throw new ValidateException("用户名为空！");
         }
-        if (StringUtils.isEmpty(request.getPassWord())) {
+        if (StringUtils.isEmpty(request.getPassword())) {
             throw new ValidateException("密码为空!");
         }
     }

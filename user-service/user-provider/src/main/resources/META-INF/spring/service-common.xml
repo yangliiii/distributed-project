@@ -39,7 +39,7 @@
 
     <bean id="userMapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.sakura.gmall.user.dal.persistence" />
-        <!--<property name="sqlSessionFactory" ref="userSqlSessionFactory" />-->
+        <property name="sqlSessionFactory" ref="userSqlSessionFactory" />
     </bean>
 
 
