@@ -120,6 +120,10 @@
       <groupId>com.sakura.gmall.user</groupId>
       <artifactId>user-api</artifactId>
     </dependency>
+    <dependency>
+      <groupId>com.sakura.gmall.common</groupId>
+      <artifactId>gmall-common</artifactId>
+    </dependency>
   </dependencies>
 
   <build>

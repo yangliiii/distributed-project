@@ -71,5 +71,6 @@
     <orderEntry type="library" name="Maven: org.lz4:lz4-java:1.4" level="project" />
     <orderEntry type="library" name="Maven: org.xerial.snappy:snappy-java:1.1.4" level="project" />
     <orderEntry type="library" name="Maven: com.sakura.gmall.user:user-api:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: com.sakura.gmall.common:gmall-common:1.0-SNAPSHOT" level="project" />
   </component>
 </module>

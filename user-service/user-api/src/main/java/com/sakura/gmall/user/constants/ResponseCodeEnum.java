@@ -9,7 +9,9 @@ public enum ResponseCodeEnum {
     SYS_PARAM_NOT_RIGHT("0002","参数不正确"),
     SYSTEM_BUSY("0003","系统繁忙"),
     USERORPASSWORD_ERRROR("0004","用户名或者密码错误"),
-    SUCCESS("0005","登录成功");
+    SUCCESS("0005","登录成功"),
+    TOKEN_EXPIRE("0006","token过期"),
+    SIGNATURE_ERROR("0007","签名验证失败");
 
     private String code;
     private String msg;

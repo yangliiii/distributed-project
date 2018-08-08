@@ -1,0 +1,44 @@
+package com.sakura.gmall.user.utils;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jws;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+
+import javax.crypto.SecretKey;
+import javax.crypto.spec.SecretKeySpec;
+import javax.xml.bind.DatatypeConverter;
+import java.security.Key;
+import java.util.Map;
+
+/**
+ * Created by lies on 2018/8/8.
+ */
+public class JwtTokenUtils {
+
+    private static Key generatorKey() {
+        SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.ES256;
+        byte[] bin = DatatypeConverter.parseBase64Binary("f3973b64918e4324ad85acea1b6cbec5");
+        Key key = new SecretKeySpec(bin,signatureAlgorithm.getJcaName());
+        return key;
+    }
+
+    public static String generatorToken(Map<String,Object> payLoad){
+        ObjectMapper objectMapper=new ObjectMapper();
+
+        try {
+            return Jwts.builder().setPayload(objectMapper.writeValueAsString(payLoad))
+                    .signWith(SignatureAlgorithm.HS256,generatorKey()).compact();
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static Claims phaseToken(String token){
+        Jws<Claims> claimsJwt=Jwts.parser().setSigningKey(generatorKey()).parseClaimsJws(token);
+        return claimsJwt.getBody();
+    }
+}

@@ -51,6 +51,7 @@
           <element id="library" level="project" name="Maven: org.lz4:lz4-java:1.4" />
           <element id="library" level="project" name="Maven: org.xerial.snappy:snappy-java:1.1.4" />
           <element id="library" level="project" name="Maven: com.sakura.gmall.user:user-api:1.0-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.sakura.gmall.common:gmall-common:1.0-SNAPSHOT" />
         </element>
       </element>
       <element id="directory" name="META-INF">

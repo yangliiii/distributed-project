@@ -1,0 +1,4 @@
+com\sakura\gmall\common\constants\GpmallWebConstant.class
+com\sakura\gmall\common\utils\JsonUtils.class
+com\sakura\gmall\common\annotation\Anoymous.class
+com\sakura\gmall\common\utils\CookieUtil.class
